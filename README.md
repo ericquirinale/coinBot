@@ -1,6 +1,7 @@
 # coinBot
 Discord Bot with crypto functionality
-Add token to token.txt and install the required dependencies
+
+Add private token to token.txt and install the required dependencies to run
 
 $help for a list of commands
 
