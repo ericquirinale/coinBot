@@ -120,7 +120,7 @@ async def on_message(message):
 
     if message.content.startswith('$help'):
         await message.channel.send("$price 'coin full-name' for a coins price")
-        await message.channel.send("$search 'keyword' to search 4chan for any posts containing that keyword")
+        await message.channel.send("$search 'keyword' to search 4chan/biz for any posts containing that keyword")
         await message.channel.send("$watchlist 'add' 'coin full-name' to add a coin to the watchlist")
         await message.channel.send("$watchlist 'remove' 'coin full-name' to remove a coin to the watchlist")
         await message.channel.send("$watchlist 'show' to show the watchlist")
@@ -152,8 +152,8 @@ async def on_message(message):
                 await message.channel.send(elements)
 
 #on login
-@client.event  # event decorator/wrapper. More on decorators here: https://pythonprogramming.net/decorators-intermediate-python-tutorial/
-async def on_ready():  # method expected by client. This runs once when connected
+@client.event
+async def on_ready():
     print(f'We have logged in as {client.user}')  # notification of login.
 
 #scheduler to run autsearch and coinwatch every hour
